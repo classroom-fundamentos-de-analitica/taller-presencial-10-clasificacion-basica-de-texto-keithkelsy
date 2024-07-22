@@ -2,6 +2,7 @@
 
 import pickle
 import pandas as pd
+import pytest
 
 from sklearn.metrics import accuracy_score
 
@@ -21,5 +22,4 @@ accuracy = accuracy_score(
     y_true=dataframe.target,
     y_pred=clf.predict(vectorizer.transform(dataframe.phrase)),
 )
-
 assert accuracy > 0.854
